@@ -2,7 +2,7 @@
 
 > Try to downgrade the permissions of a process with root privileges
 
-Usually a process started with `sudo`.
+Usually applies to a process started with `sudo`. The Windows platform is currently unsupported because it lacks `setuid` support.
 
 
 ## Install
