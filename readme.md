@@ -2,7 +2,9 @@
 
 > Try to downgrade the permissions of a process with root privileges
 
-Usually applies to a process started with `sudo`. The Windows platform is currently unsupported because it lacks `setuid` support.
+Usually applies to a process started with `sudo`.
+
+Windows is gracefully ignored as it lacks a way to [set UID](http://nodejs.org/api/process.html#process_process_setuid_id).
 
 
 ## Install
