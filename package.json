@@ -1,6 +1,6 @@
 {
   "name": "downgrade-root",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Try to downgrade the permissions of a process with root privileges",
   "license": "MIT",
   "repository": "sindresorhus/downgrade-root",
