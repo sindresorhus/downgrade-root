@@ -1,19 +1,11 @@
-'use strict';
-var test = require('ava');
-var defaultUid = require('default-uid');
-var downgradeRoot = require('./');
+import test from 'ava';
+import defaultUid from 'default-uid';
+import m from './';
 
-test(function (t) {
-	var _ = process.getuid;
-
-	process.getuid = function () {
-		return 0;
-	};
-
-	downgradeRoot();
-
+test(t => {
+	const _ = process.getuid;
+	process.getuid = () => 0;
+	m();
 	process.getuid = _;
-
-	t.assert(process.getuid() === defaultUid());
-	t.end();
+	t.is(process.getuid(), defaultUid());
 });
