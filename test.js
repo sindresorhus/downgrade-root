@@ -9,3 +9,11 @@ test(t => {
 	process.getuid = _;
 	t.is(process.getuid(), defaultUid());
 });
+
+test(t => {
+	const _ = process.getgid;
+	process.getgid = () => 0;
+	m();
+	process.getgid = _;
+	t.true(process.getgid() > 0);
+});
