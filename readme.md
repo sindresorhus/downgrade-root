@@ -1,4 +1,4 @@
-# downgrade-root [![Build Status](https://travis-ci.org/sindresorhus/downgrade-root.svg?branch=master)](https://travis-ci.org/sindresorhus/downgrade-root)
+# downgrade-root
 
 > Try to downgrade the permissions of a process with root privileges
 
