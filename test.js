@@ -7,5 +7,5 @@ test('main', t => {
 	process.getuid = () => 0;
 	downgradeRoot();
 	process.getuid = _;
-	t.is(process.getuid(), defaultUid());
+	t.is(process.getuid(), process.env.CI ? 1000 : defaultUid());
 });

@@ -6,7 +6,7 @@ export default function downgradeRoot() {
 		return;
 	}
 
-	// `setgid`` needs to happen before setuid to avoid EPERM.
+	// `setgid` needs to happen before setuid to avoid EPERM.
 	if (process.setgid) {
 		const gid = Number.parseInt(process.env.SUDO_GID, 10);
 		if (gid && gid > 0) {
