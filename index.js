@@ -1,3 +1,4 @@
+import process from 'node:process';
 import isRoot from 'is-root';
 import defaultUid from 'default-uid';
 
@@ -15,7 +16,7 @@ export default function downgradeRoot() {
 	}
 
 	if (process.setuid) {
-		const uid = Number.parseInt(process.env.SUDO_UID, 10) || defaultUid();
+		const uid = Number.parseInt(process.env.SUDO_UID, 10) ?? defaultUid();
 		if (uid && uid > 0) {
 			process.setuid(uid);
 		}

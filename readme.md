@@ -8,8 +8,8 @@ Windows is gracefully ignored as it lacks a way to [set UID](http://nodejs.org/a
 
 ## Install
 
-```
-$ npm install downgrade-root
+```sh
+npm install downgrade-root
 ```
 
 ## Usage
